@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/ordersys?useUnicode=true&amp;serverTimezone=UTC&amp;characterEncoding=utf-8</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- DB schema will be updated if needed -->
+        <property name="hbm2ddl.auto">create</property>
+
+        <mapping class="com.fintech.taskunite.domain.City"/>
+        <mapping class="com.fintech.taskunite.domain.District"/>
+        <mapping class="com.fintech.taskunite.domain.Address"/>
+        <mapping class="com.fintech.taskunite.domain.User"/>
+        <mapping class="com.fintech.taskunite.domain.UserInformation"/>
+        <mapping class="com.fintech.taskunite.domain.Master"/>
+        <mapping class="com.fintech.taskunite.domain.Tasker"/>
+        <mapping class="com.fintech.taskunite.domain.PaymentInformation"/>
+        <mapping class="com.fintech.taskunite.domain.Notification"/>
+        <mapping class="com.fintech.taskunite.domain.Statistic"/>
+        <mapping class="com.fintech.taskunite.domain.Room"/>
+        <mapping class="com.fintech.taskunite.domain.Schedule"/>
+        <mapping class="com.fintech.taskunite.domain.TaskCategory"/>
+        <mapping class="com.fintech.taskunite.domain.Task"/>
+        <mapping class="com.fintech.taskunite.domain.TaskerCategory"/>
+        <mapping class="com.fintech.taskunite.domain.Review"/>
+    </session-factory>
+</hibernate-configuration>
